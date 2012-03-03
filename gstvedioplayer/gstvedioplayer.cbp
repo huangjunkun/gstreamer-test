@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gstvedioplayer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/gstvedioplayer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="`pkg-config --cflags gtk+-2.0 `" />
+					<Add directory="/usr/include/gstreamer-0.10/" />
+					<Add directory="/usr/include/glib-2.0/" />
+					<Add directory="/usr/lib/glib-2.0/include" />
+					<Add directory="/usr/include/libxml2/" />
+				</Compiler>
+				<Linker>
+					<Add option="`pkg-config --libs gtk+-2.0`" />
+					<Add option="-lgstreamer-0.10" />
+					<Add directory="/usr/lib/gstreamer-0.10/" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/gstvedioplayer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../add_core/add_core01.h" />
+		<Unit filename="../add_core/add_core02.h" />
+		<Unit filename="kgstaudioplayer.cpp" />
+		<Unit filename="kgstaudioplayer.h" />
+		<Unit filename="kgstvedioplayer.cpp" />
+		<Unit filename="kgstvedioplayer.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
